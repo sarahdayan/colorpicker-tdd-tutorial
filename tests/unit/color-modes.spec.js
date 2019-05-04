@@ -1,8 +1,8 @@
-import { rgb, hex, hsl } from '@/utils/ColorModes'
+import { rgb, hex, hsl } from '@/utils/color-modes'
 
 const color = 'e3342f'
 
-describe('ColorModes', () => {
+describe('color-modes', () => {
   test('returns the color into RGB notation', () => {
     expect(rgb(color)).toBe('227, 52, 47')
   })

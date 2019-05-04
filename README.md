@@ -1,6 +1,6 @@
 # Color Picker Vue.js TDD Tutorial 🎨
 
-The project of the tutorial [An Introduction to TDD with Vue.js](https://frontstuff.io//an-introduction-to-tdd-with-vuejs) on [fronstuff.io](https://frontstuff.io).
+The project of the tutorial [An Introduction to TDD with Vue.js](https://frontstuff.io//an-introduction-to-tdd-with-vuejs) on [fronstuff.io](https://frontstuff.io). You can preview it [here](https://colorpicker-tdd-tutorial.netlify.com/).
 
 This projects requires [Node.js](https://nodejs.org/en/).
 

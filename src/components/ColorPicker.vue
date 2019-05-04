@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import * as modes from '@/utils/ColorModes'
+import * as modes from '@/utils/color-modes'
 import CheckIcon from '@/assets/check.svg'
 
 export default {

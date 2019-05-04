@@ -53,7 +53,7 @@ describe('ColorPicker', () => {
     test('displays the default swatch in the default mode', () => {
       expect(wrapper.find('.color-code').text()).toEqual('#e3342f')
     })
-    test('changes to the value of a swatch when clicked', () => {
+    test('displays the code in the right color when changing color', () => {
       wrapper
         .findAll('.swatch')
         .at(2)
@@ -61,10 +61,7 @@ describe('ColorPicker', () => {
       expect(wrapper.find('.color-code').text()).toEqual('#f6993f')
     })
     test('displays the code in the right mode when changing mode', () => {
-      wrapper
-        .findAll('.color-mode')
-        .at(2)
-        .trigger('click')
+      wrapper.find('.color-mode-hsl').trigger('click')
       expect(wrapper.find('.color-code').text()).toEqual('2°, 76%, 54%')
     })
   })
