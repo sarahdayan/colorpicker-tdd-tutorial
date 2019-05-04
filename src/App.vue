@@ -14,3 +14,18 @@ export default {
   }
 }
 </script>
+
+<style>
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+}
+</style>
