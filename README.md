@@ -1,34 +1,47 @@
-# colorswatches-tdd
+# Color Picker Vue.js TDD Tutorial 🎨
 
-## Project setup
-```
+The project of the tutorial [An Introduction to TDD with Vue.js](https://frontstuff.io//an-introduction-to-tdd-with-vuejs) on [fronstuff.io](https://frontstuff.io).
+
+This projects requires [Node.js](https://nodejs.org/en/).
+
+## Installation
+
+To install the project, run the following command in your terminal:
+
+```sh
+npm install
+# or
 yarn install
 ```
 
 ### Compiles and hot-reloads for development
-```
-yarn run serve
+
+```sh
+npm run serve
+# or
+yarn serve
 ```
 
 ### Compiles and minifies for production
-```
-yarn run build
-```
 
-### Run your tests
-```
-yarn run test
+```sh
+npm run build
+# or
+yarn build
 ```
 
 ### Lints and fixes files
-```
-yarn run lint
+
+```sh
+npm run lint
+# or
+yarn lint
 ```
 
 ### Run your unit tests
-```
-yarn run test:unit
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```sh
+npm run test:unit
+# or
+yarn test:unit
+```
