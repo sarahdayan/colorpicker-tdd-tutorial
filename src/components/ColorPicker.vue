@@ -116,7 +116,6 @@ export default {
   font-size: 1rem;
   letter-spacing: 0.05rem;
   margin: 0 -0.25rem 0.75rem;
-  text-transform: uppercase;
 }
 
 .color-mode {
@@ -128,6 +127,7 @@ export default {
   font-weight: 700;
   margin: 0 0.25rem;
   padding: 0;
+  text-transform: uppercase;
 }
 
 .color-mode.active {
