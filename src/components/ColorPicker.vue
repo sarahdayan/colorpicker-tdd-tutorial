@@ -6,13 +6,16 @@
         v-for="(swatch, index) in swatches"
         :style="{ background: `#${swatch}` }"
         class="swatch"
-        :class="{ active: index === activeSwatch }"
+        :class="[
+          { active: index === activeSwatch },
+          { light: isLight(swatch) }
+        ]"
         @click="activeSwatch = index"
       >
         <check-icon />
       </li>
     </ul>
-    <div class="color-modes">
+    <div class="color">
       <button
         :key="index"
         v-for="(mode, index) in colorModes"
@@ -28,8 +31,10 @@
 </template>
 
 <script>
-import * as modes from '@/utils/color-modes'
+import { rgb, hex, hsl, isLight } from '@/utils/color'
 import CheckIcon from '@/assets/check.svg'
+
+const modes = { rgb, hex, hsl }
 
 export default {
   components: { CheckIcon },
@@ -45,7 +50,8 @@ export default {
     return {
       activeSwatch: 0,
       activeMode: 0,
-      colorModes: ['hex', 'rgb', 'hsl']
+      colorModes: ['hex', 'rgb', 'hsl'],
+      isLight
     }
   },
   computed: {
@@ -111,7 +117,11 @@ export default {
   display: block;
 }
 
-.color-modes {
+.swatch.light svg {
+  color: #606f7b;
+}
+
+.color {
   display: flex;
   font-size: 1rem;
   letter-spacing: 0.05rem;
@@ -132,6 +142,11 @@ export default {
 
 .color-mode.active {
   color: #364349;
+}
+
+.color-mode:focus {
+  color: #364349;
+  outline: 0;
 }
 
 .color-code {

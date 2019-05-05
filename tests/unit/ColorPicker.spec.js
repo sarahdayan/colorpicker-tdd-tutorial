@@ -30,13 +30,22 @@ describe('ColorPicker', () => {
       targetSwatch.trigger('click')
       expect(targetSwatch.classes()).toContain('active')
     })
+    test('sets the swatch as light when color is light', () => {
+      const targetSwatch = wrapper.findAll('.swatch').at(4)
+      expect(targetSwatch.classes()).toContain('light')
+    })
+    test('does not set the swatch as light when color is dark', () => {
+      const targetSwatch = wrapper.findAll('.swatch').at(3)
+      expect(targetSwatch.classes()).not.toContain('light')
+    })
   })
   describe('Color model', () => {
     test('displays each mode as an individual button', () => {
       const buttons = wrapper.findAll('.color-mode')
-      const modes = ['hex', 'rgb', 'hsl']
-      modes.forEach((mode, index) => {
-        expect(buttons.at(index).classes()).toContain(`color-mode-${mode}`)
+      buttons.wrappers.forEach(button => {
+        expect(button.classes()).toEqual(
+          expect.arrayContaining([expect.stringMatching(/color-mode-\w{1,}/)])
+        )
       })
     })
     test('sets the first mode as the selected one by default', () => {
